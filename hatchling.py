@@ -1,4 +1,4 @@
-code = "Homer Simpson".replace('i', '*')
+code = "Lilith".replace('th', '')
 
 
 
