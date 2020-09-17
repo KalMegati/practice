@@ -1,5 +1,5 @@
-code = "Homer Simpson".endswith('Simpson')
+code = "Homer Simpson".replace('i', '*')
 
 
 
-print("Charles Montgomery Burns".endswith('Simpson'))
+print(code)
