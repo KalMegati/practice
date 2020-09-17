@@ -1,3 +1,5 @@
-msg = "The longer the Icon of Sin is on Earth, the stronger it will become."
+code = "Homer Simpson".endswith('Simpson')
 
-print(msg)
+
+
+print("Charles Montgomery Burns".endswith('Simpson'))
