@@ -5,4 +5,8 @@ class Cat:
 
 layla = Cat("tabby", "Layla")
 
+apollo = Cat("black", "Apollo")
+
 print(layla.name)
+
+print(apollo.color)
