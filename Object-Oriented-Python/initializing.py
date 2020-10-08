@@ -10,3 +10,7 @@ apollo = Cat("black", "Apollo")
 print(layla.name)
 
 print(apollo.color)
+
+apollo.color = "gold"
+
+print (apollo.color)
