@@ -1,16 +1,20 @@
 public class arguments {
 
-    public static void main(Integer args) {
-        int x = 42;
+    public static void main(String[] args) {
+        // int x = 3;
 
-        int y = 4_3;
+        // int y = 4;
 
-        if (args == y) {
-            System.out.println("Success!");
+        System.out.println(args[0]);
+
+        System.out.println(args[1]);
+
+        if (args[0] == args[1]) {
+            System.out.println("TWIN");
         }
 
-        if (x != y) {
-            System.out.println("Failure.");
-        }
+        // if (x != y) {
+        //     System.out.println("Failure.");
+        // }
     }
 }
