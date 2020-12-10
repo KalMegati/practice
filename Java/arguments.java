@@ -11,8 +11,8 @@ public class arguments {
             System.out.println("TWIN");
         }
 
-        if (x != y) {
-            System.out.println("Failure.");
-        }
+        // if (x != y) {
+        //     System.out.println("Failure.");
+        // }
     }
 }
