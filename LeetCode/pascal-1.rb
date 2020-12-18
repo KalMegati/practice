@@ -1,6 +1,7 @@
 # require 'pry'
 
 def generate(num_rows)
+    return [] if num_rows == 0
     pascal = [[1]]
     row = 0
     while row < num_rows-1
