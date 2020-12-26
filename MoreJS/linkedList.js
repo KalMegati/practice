@@ -59,3 +59,24 @@ LinkedList.prototype.getAt = function(index){
     }
     return null;
 }
+
+// The insertAt() function contains the steps to insert a node at a given index.
+LinkedList.prototype.insertAt = function(data, index){
+    // if the list is empty i.e. head = null
+            if (!this.head) {
+                this.head = new Node(data);
+                return;
+            }
+    // if new node needs to be inserted at the front of the list i.e. before the head. 
+            if (index === 0) {
+               this.head = new Node(data, this.head);
+               return;
+            }
+    // else, use getAt() to find the previous node.
+            const previous = this.getAt(index - 1);
+            let newNode = new Node(data);
+            newNode.next = previous.next;
+            previous.next = newNode;       
+    
+            return this.head
+}
