@@ -131,3 +131,7 @@ LinkedList.prototype.deleteAt = function(index){
         previous.next = previous.next.next;     
         return this.head
 }
+
+LinkedList.prototype.deleteList = function(){
+    this.head = null;
+}
