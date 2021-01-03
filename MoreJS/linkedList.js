@@ -17,6 +17,20 @@ class LinkedList{
     }
 }
 
+// A helper function getAt() is defined to get to the desired position. This function can also be later used for performing delete operation from a given position.
+LinkedList.prototype.getAt = function(index){
+    let counter = 0;
+    let node = this.head;
+    while (node) {
+        if (counter === index) {
+           return node;
+        }
+        counter++;
+        node = node.next;
+    }
+    return null;
+}
+
 LinkedList.prototype.insertAtBeginning = function(data){
     // A newNode object is created with property data and next = null
         let newNode = new Node(data);
@@ -44,20 +58,6 @@ LinkedList.prototype.insertAtEnd = function(data){
        }
        tail.next = newNode;
        return this.head;
-}
-
-// A helper function getAt() is defined to get to the desired position. This function can also be later used for performing delete operation from a given position.
-LinkedList.prototype.getAt = function(index){
-    let counter = 0;
-    let node = this.head;
-    while (node) {
-        if (counter === index) {
-           return node;
-        }
-        counter++;
-        node = node.next;
-    }
-    return null;
 }
 
 // The insertAt() function contains the steps to insert a node at a given index.
