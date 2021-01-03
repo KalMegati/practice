@@ -80,3 +80,11 @@ LinkedList.prototype.insertAt = function(data, index){
     
             return this.head
 }
+
+LinkedList.prototype.deleteFirstNode = function(){
+    if(!this.head){
+        return;
+    }
+    this.head = this.head.next;
+    return this.head;
+}
