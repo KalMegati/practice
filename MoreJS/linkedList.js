@@ -110,3 +110,24 @@ LinkedList.prototype.deleteLastNode = function(){
    return this.head;
 }
 
+LinkedList.prototype.deleteAt = function(index){
+    // when list is empty i.e. head = null
+        if (!this.head) {
+             this.head = new Node(data);
+             return;
+         }
+    // node needs to be deleted from the front of the list i.e. before the head.
+        if (index === 0) {
+            this.head = this.head.next;
+            return;
+        }
+    // else, use getAt() to find the previous node.
+        const previous = this.getAt(index - 1);
+        
+        if (!previous || !previous.next) {
+            return;
+        }
+        
+        previous.next = previous.next.next;     
+        return this.head
+}
