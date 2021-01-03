@@ -10,4 +10,4 @@ while code > 0:
     code -= 1
 print(code)
 
-print(myArr)
+# print(myArr)
