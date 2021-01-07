@@ -1,4 +1,5 @@
-#
+# automatically connect to network on boot
+# in wpa file: wpa_supplicant.conf
 
 ctrl_interface=DIR=/var/run/wpa_supplicant
 GROUP=netdev
@@ -11,10 +12,10 @@ network={
     key_mgmt=WPA-PSK
 }
 
-#
+# find and apply latest updates
 
 sudo apt-get update -y && sudo apt-get upgrade -y
 
-#
+# install software
 
 sudo apt-get install xrdp
