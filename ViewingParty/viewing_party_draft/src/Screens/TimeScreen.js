@@ -39,7 +39,7 @@ class TimeScreen extends React.Component {
         return (
           <div>
               {/* <label id="minutes">00</label>:<label id="seconds">00</label> */}
-              <h1>${this.state.totalSeconds}</h1>
+              <h1>{this.state.totalSeconds}</h1>
           </div>
         )
     }
