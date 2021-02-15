@@ -7,6 +7,8 @@ public class arguments {
 
         System.out.println(args[1]);
 
+        System.out.println(args[1]+args[0]);
+
         if (args[0].equals(args[1])) {
             System.out.println("TWIN");
         }
