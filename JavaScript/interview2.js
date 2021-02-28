@@ -2,16 +2,23 @@ class Deferred {
 
     constructor(){
         this.store = []
+        this.temp = null
     }
     
+    retVal(){
+        return this.temp
+    }
+
     then(func){
         this.store.push(func);
     }
 
     resolve(value){
-        let temp = value
+        this.temp = value
         this.store.forEach( func => {
-            temp = func(temp)
+            this.temp = func(this.temp, ()=>{
+                console.log("Hell")
+            })
             //callback?
         })
     }
