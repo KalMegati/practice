@@ -1,0 +1,62 @@
+# you can write to stdout for debugging purposes, e.g.
+# puts "this is a debug message"
+
+def solution(s)
+  
+  #break down s into hash
+
+  calls = []
+
+  s.split("\n").each_with_index{ |receipt, index|
+    temp_arr = receipt.split(",")
+    timebreak = temp_arr[0].split(":")
+    calls << {
+      number: temp_arr[1].split("-").join(""),
+      time: timebreak[0].to_i*3600 + timebreak[1].to_i*60 + timebreak[2].to_i
+    }
+  }
+
+  # determine most frequent caller
+
+  contacts = {}
+
+  calls.each{ |call| 
+    if contacts[call[:number]]
+      contacts[call[:number]] += call[:time]
+    else
+      contacts[call[:number]] = call[:time]
+    end
+  }
+
+  freqnum = ""
+  freqtime = 0
+
+  contacts.each { |number, time| 
+    if time > freqtime
+      freqtime = time
+      freqnum = number
+    elsif time == freqtime
+      if freqnum.to_i > number.to_i
+        freqnum = number
+      end
+    end
+  }
+
+  #price out each call
+
+  total_price = 0
+
+  calls.each { |call| 
+    next if call[:number] == freqnum
+    if call[:time] >= 300
+      total_price += (call[:time] / 60.0).ceil * 150
+    else
+      total_price += (call[:time] / 60.0).ceil * 3
+    end
+  }
+
+  puts freqnum
+
+  return total_price
+
+end
