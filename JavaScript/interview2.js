@@ -22,7 +22,7 @@ class Deferred {
 
             
             if (this.temp instanceof Deferred) {
-                this.temp.store.push(this.store.shift())
+                this.temp.then(this.store.shift())
             } else {
                 this.temp = this.store.shift()(this.temp)
             }
