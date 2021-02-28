@@ -12,6 +12,7 @@ class Deferred {
         let temp = value
         this.store.forEach( func => {
             temp = func(temp)
+            //callback?
         })
     }
 
