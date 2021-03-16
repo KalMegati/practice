@@ -17,4 +17,8 @@ public class arguments {
         //     System.out.println("Failure.");
         // }
     }
+
+    // public static int intermediate() {
+    //     return 5;
+    // }
 }
